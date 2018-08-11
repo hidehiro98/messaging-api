@@ -43,7 +43,7 @@ app.post('/callback', function(req, res) {
             },
         ],
         function(req, displayName) {
-            sender.send(req, [message.textMessage("こんにちは、" +　displayName　+ "さん")]);
+            sender.send(req, [message.textMessage("hello," +　displayName　+ "")]);
             return;
         }
     );
