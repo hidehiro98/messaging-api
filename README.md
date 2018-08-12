@@ -9,14 +9,25 @@ codenvyアカウント登録
 - [codenvy](https://codenvy.io/site/login)のアカウント登録
 - codenvyでワークスペース作成
 
-![SELECT STACK](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/select_node.png "SELECT STACK")
-![SELECT Git URL](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/select_repo.png "SELECT Git URL")
-![INSTALL HEROKU](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/install_heroku_cli.png "INSTALL HEROKU")
+## STACKを選択する
 
-- heroku CLI のインストール
+- 今回はNodeを選択してください
+
+![SELECT STACK](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/select_node.png "SELECT STACK")
+
+## PROJECTSでGitURLを指定する
+
+- 以下のURLをコピペして貼り付けましょう
+`git@github.com:x-hack-git/messaging-api.git`
+
+![SELECT Git URL](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/select_repo.png "SELECT Git URL")
+
+## heroku CLI のインストール
+
+- 以下のコマンドを実行してみましょう
 `$ curl https://cli-assets.heroku.com/install.sh | sh`
 
-(node.jsでの開発環境がある場合はスキップ可)
+![INSTALL HEROKU](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/install_heroku_cli.png "INSTALL HEROKU")
 
 # 事前準備
 
