@@ -1,12 +1,12 @@
 {
-  "name": "kukkoro-bot",
+  "name": "xhack-line-bot",
   "version": "1.0.0",
-  "description": "kukkoro-bot",
+  "description": "X-HACK勉強会用の資料",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "k-nakayama-pg",
+  "author": "shinsuke matsuda",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",

@@ -42,10 +42,19 @@ app.post('/callback', function(req, res) {
                 }
             },
         ],
+        // function(req, displayName) {
+        //     var message = "hello," +　displayName　+ "";
+        //     sendMessage.send(req, [ message.textMessage(message) ]);
+        //     return;
+        // }
         function(req, displayName) {
-            sendMessage.send(req, [message.textMessage("hello," +　displayName　+ "")]);
+            var messages = ["1", "2", "3", "4"];
+            sendMessage.send(req, [ message.imagemapMessage(messages) ]);
             return;
         }
+    );
+    return;
+}
     );
 });
 

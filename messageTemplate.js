@@ -6,10 +6,10 @@ exports.textMessage = function(text)
   }
 }
 
-exports.imagemapMessage = function (typeName, text) {
+exports.imagemapMessage = function (text) {
   return {
     "type": "imagemap",
-    "baseUrl": 'replace your image url', // input your image path
+    "baseUrl": 'https://i.imgur.com/8cbL5dl.jpg', // input your image path
     "altText": "This is an imagemap",
     "baseSize": {"height": 1040,"width": 1040},
     "actions": [
