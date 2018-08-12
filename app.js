@@ -53,9 +53,6 @@ app.post('/callback', function(req, res) {
             return;
         }
     );
-    return;
-}
-    );
 });
 
 app.listen(app.get('port'), function() {
