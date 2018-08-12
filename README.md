@@ -8,13 +8,13 @@ codenvyアカウント登録
 
 - [codenvy](https://codenvy.io/site/login)のアカウント登録
 - codenvyでワークスペース作成
+
+![SELECT STACK](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/select_node.png "SELECT STACK")
+![SELECT Git URL](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/select_repo.png "SELECT Git URL")
+![INSTALL HEROKU](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/install_heroku_cli.png "INSTALL HEROKU")
+
 - heroku CLI のインストール
 `$ curl https://cli-assets.heroku.com/install.sh | sh`
-
-
-![SELECT STACK](https://github.com/x-hack-git/messaging-api/image/select_node.png "SELECT STACK")
-![SELECT Git URL](https://github.com/x-hack-git/messaging-api/image/select_repo.png "SELECT Git URL")
-![INSTALL HEROKU](https://github.com/x-hack-git/messaging-api/image/install_heroku_cli.png "INSTALL HEROKU")
 
 (node.jsでの開発環境がある場合はスキップ可)
 
