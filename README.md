@@ -2,6 +2,10 @@
 
 勉強会用のBOTソースコードです。
 
+今回作成予定のもの
+<img src="https://github.com/x-hack-git/messaging-api/blob/master/image/sample-image.gif" height="320px">
+
+
 # 必要なアカウント
 
 ## Chromeインストール(必要があれば)
@@ -95,4 +99,3 @@ $ heroku config:set LINE_CHANNEL_ACCESS_TOKEN=""
 ```
 $ git push heroku master
 ```
-
