@@ -23,6 +23,7 @@ codenvyアカウント登録
 
 - 以下のURLをコピペして貼り付けましょう
 `git@github.com:x-hack-git/messaging-api.git`
+`https://github.com/x-hack-git/messaging-api.git`
 
 ![SELECT Git URL](https://raw.githubusercontent.com/x-hack-git/messaging-api/master/image/select_repo.png "SELECT Git URL")
 
