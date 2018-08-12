@@ -42,13 +42,13 @@ exports.singleImagemapMessage = function (typeName)
   if (typeName == "0") {
     return {
       "type": "imagemap",
-      "baseUrl": 'replace your image url', // input your image path
-      "altText": "診断を開始しますか？",
+      "baseUrl": 'https://i.imgur.com/8cbL5dl.jpg', // input your image path
+      "altText": "altText",
       "baseSize": {"width": 1040, "height": 1040},
       "actions": [
         {
           "type": "message",
-          "text": "診断開始",
+          "text": "text",
           "area": {"x": 0,"y": 0,"width": 1040,"height": 1040}
         }
       ]
