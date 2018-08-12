@@ -45,10 +45,13 @@ https://id.heroku.com/login
 
 # クイックスタート（herokuにデプロイする場合）
 
+LINE Developersで取得した値を入れる
 ```
-git clone this
-git remote add heroku <Your_heroku_app_git_url>
-heroku config:set LINE_CHANNEL_SECRET="<Your LINE_CHANNEL_SECRET>"
-heroku config:set LINE_CHANNEL_ACCESS_TOKEN="<Your LINE_CHANNEL_ACCESS_TOKEN>"
+heroku config:set LINE_CHANNEL_SECRET=""
+heroku config:set LINE_CHANNEL_ACCESS_TOKEN=""
+```
+
+herokuにpushする
+```
 git push heroku master
 ```
