@@ -2,6 +2,32 @@
 
 勉強会用のBOTソースコードです。
 
+# 開発環境が必要な場合
+
+codenvyアカウント登録
+
+- [codenvy](https://codenvy.io/site/login)のアカウント登録
+- codenvyでワークスペース作成
+- heroku CLI のインストール
+`$ curl https://cli-assets.heroku.com/install.sh | sh`
+
+
+![SELECT STACK](https://github.com/x-hack-git/messaging-api/image/select_node.png "SELECT STACK")
+![SELECT Git URL](https://github.com/x-hack-git/messaging-api/image/select_repo.png "SELECT Git URL")
+![INSTALL HEROKU](https://github.com/x-hack-git/messaging-api/image/install_heroku_cli.png "INSTALL HEROKU")
+
+(node.jsでの開発環境がある場合はスキップ可)
+
+# 事前準備
+
+```
+LINE Messaging API の利用登録
+https://developers.line.me/ja/
+
+Heroku アカウントの利用登録
+https://id.heroku.com/login
+```
+
 # クイックスタート（herokuにデプロイする場合）
 
 ```

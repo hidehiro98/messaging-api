@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var request = require('request');
 var crypto = require("crypto");
 var async = require('async');
-var sender = require('./sendMessage.js');
+var sendMessage = require('./sendMessage.js');
 var message = require('./messageTemplate.js');
 
 app.set('port', (process.env.PORT || 8000));
@@ -43,7 +43,7 @@ app.post('/callback', function(req, res) {
             },
         ],
         function(req, displayName) {
-            sender.send(req, [message.textMessage("hello," +　displayName　+ "")]);
+            sendMessage.send(req, [message.textMessage("hello," +　displayName　+ "")]);
             return;
         }
     );
