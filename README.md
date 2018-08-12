@@ -4,7 +4,16 @@
 
 # 必要なアカウント
 
+## Chromeインストール(必要があれば)
+
+https://www.google.co.jp/chrome/?brand=CHBD&gclid=Cj0KCQjwtb_bBRCFARIsAO5fVvGSVp4jgIAY-Chnd2DUMxWERGGF0xRxr3dZLYHwZ1g92ohYH2MCAc0aAtv1EALw_wcB&gclsrc=aw.ds&dclid=CO6v1pLW6NwCFVoxKgod8XYO3Q
+
+## gmailアカウント取得(必要があれば)
+
+https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp
+
 ## Heroku アカウント
+
 Heroku アカウントの利用登録
 https://id.heroku.com/login
 
@@ -27,12 +36,15 @@ Botアカウントを作成し、herokuサーバーと連携します。
 - LINE_CHANNEL_SECRETの取得
 - LINE_CHANNEL_ACCESS_TOKENの取得
 - Webhook URLをセットする(後述)
-
-アプリケーションを一つ作成します。
+- アプリケーションを一つ作成
 
 ## codenvy アカウント
 codenvyアカウント登録
 https://codenvy.io/site/login
+
+ブラウザ上で動作する開発環境です。
+開発環境を構築する際の、複雑で面倒なインストール作業を省略できます。
+実際にコードを書いてプログラミングをし、herokuサーバーにアップロードします。
 
 ### やること
 - herokuと連携する
@@ -45,6 +57,8 @@ https://codenvy.io/site/login
 
 ### やること
 特になし
+
+# codenvyでの作業
 
 ## codenvyでワークスペース作成
 
@@ -71,6 +85,7 @@ https://codenvy.io/site/login
 # LINE Developersで取得した値をherokuにセットする
 
 ```
+$ heroku login
 $ heroku config:set LINE_CHANNEL_SECRET=""
 $ heroku config:set LINE_CHANNEL_ACCESS_TOKEN=""
 ```
