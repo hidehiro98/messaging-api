@@ -43,18 +43,18 @@ app.post('/callback', function(req, res) {
                 }
             },
         ],
-        function(req, displayName, message_text) {
-            //var message = "hello," +　displayName　+ ""; // helloと返事する
-            //var message = message_text; // おうむ返しする
-            var message = message_text + "[" + message_text.length + "文字]";
-            sendMessage.send(req, [ messageTemplate.textMessage(message) ]);
-            return;
-        }
-        // function(req, displayName) {
-        //     var messages = ["1", "2", "3", "4"];
-        //     sendMessage.send(req, [ messageTemplate.imagemapMessage(messages) ]);
-        //     return;
-        // }
+//        function(req, displayName, message_text) {
+//            var message = "hello," +　displayName　+ ""; // helloと返事する
+//            //var message = message_text; // おうむ返しする
+//            //var message = message_text + "[" + message_text.length + "文字]";
+//            sendMessage.send(req, [ messageTemplate.textMessage(message) ]);
+//            return;
+//        }
+         function(req, displayName, message_text) {
+             var messages = ["1", "2", "3", "4"];
+             sendMessage.send(req, [ messageTemplate.imagemapMessage(messages) ]);
+             return;
+         }
     );
 });
 
