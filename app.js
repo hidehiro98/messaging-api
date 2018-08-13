@@ -5,7 +5,7 @@ var request = require('request');
 var crypto = require("crypto");
 var async = require('async');
 var sendMessage = require('./sendMessage.js');
-var message = require('./messageTemplate.js');
+var messageTemplate = require('./messageTemplate.js');
 
 app.set('port', (process.env.PORT || 8000));
 // JSONの送信を許可
@@ -46,12 +46,12 @@ app.post('/callback', function(req, res) {
         function(req, displayName, message_text) {
             var message = "hello," +　displayName　+ "";
             message = message_text;
-            sendMessage.send(req, [ message.textMessage(message) ]);
+            sendMessage.send(req, [ messageTemplate.textMessage(message) ]);
             return;
         }
         // function(req, displayName) {
         //     var messages = ["1", "2", "3", "4"];
-        //     sendMessage.send(req, [ message.imagemapMessage(messages) ]);
+        //     sendMessage.send(req, [ messageTemplate.imagemapMessage(messages) ]);
         //     return;
         // }
     );
