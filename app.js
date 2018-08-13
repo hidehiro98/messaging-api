@@ -43,25 +43,25 @@ app.post('/callback', function(req, res) {
                 }
             },
         ],
-//        function(req, displayName, message_text) {
-//            var message = "hello," +　displayName　+ ""; // helloと返事する
-//            //var message = message_text; // おうむ返しする
-//            //var message = message_text + "[" + message_text.length + "文字]";
-//            sendMessage.send(req, [ messageTemplate.textMessage(message) ]);
-//            return;
-//        }
-         function(req, displayName, message_text) {
-             var messages = ["1", "2", "3", "4"];
-             if (message_text == "猫") {
-                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/8cbL5dl.jpg') ]);
-             } else if (message_text == "犬") {
-                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/ph82KWH.jpg') ]);
-             } else {
-                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/Z6ilhSI.jpg') ]);                 
-             }
-
-             return;
-         }
+        function(req, displayName, message_text) {
+            var message = "hello," +　displayName　+ ""; // helloと返事する
+            //var message = message_text; // おうむ返しする
+            //var message = message_text + "[" + message_text.length + "文字]";
+            sendMessage.send(req, [ messageTemplate.textMessage(message) ]);
+            return;
+        }
+//         function(req, displayName, message_text) {
+//             var messages = ["1", "2", "3", "4"];
+//             if (message_text == "猫") {
+//                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/8cbL5dl.jpg') ]);
+//             } else if (message_text == "犬") {
+//                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/ph82KWH.jpg') ]);
+//             } else {
+//                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/Z6ilhSI.jpg') ]);                 
+//             }
+//
+//             return;
+//         }
     );
 });
 
