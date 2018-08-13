@@ -33,7 +33,7 @@ app.post('/callback', function(req, res) {
 
                 // ユーザIDを取得する
                 var user_id      = req.body['events'][0]['source']['userId'];
-                var message_text = req.body['events'][0]['message']['text']
+                var message_text = req.body['events'][0]['message']['text'];
                 if (req.body['events'][0]['source']['type'] == 'user') {
                     request.get(getProfileOption(user_id), function(error, response, body) {
                         if (!error && response.statusCode == 200) {
