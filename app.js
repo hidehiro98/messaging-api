@@ -32,32 +32,39 @@ app.post('/callback', function(req, res) {
                 //}
 
                 // ユーザIDを取得する
-                var user_id = req.body['events'][0]['source']['userId'];
+                var user_id      = req.body['events'][0]['source']['userId'];
+                var message_text = req.body['events'][0]['message']['text']
                 if (req.body['events'][0]['source']['type'] == 'user') {
                     request.get(getProfileOption(user_id), function(error, response, body) {
                         if (!error && response.statusCode == 200) {
-                            callback(req, body['displayName']);
+                            callback(req, body['displayName'], message_text);
                         }
                     });
                 }
             },
         ],
-        // function(req, displayName) {
-        //     var message = "hello," +　displayName　+ "";
-        //     sendMessage.send(req, [ message.textMessage(message) ]);
-        //     return;
-        // }
-        function(req, displayName) {
-            var messages = ["1", "2", "3", "4"];
-            sendMessage.send(req, [ message.imagemapMessage(messages) ]);
+        function(req, displayName, message_text) {
+            var message = "hello," +　displayName　+ "";
+            message = message_text;
+            sendMessage.send(req, [ message.textMessage(message) ]);
             return;
         }
+        // function(req, displayName) {
+        //     var messages = ["1", "2", "3", "4"];
+        //     sendMessage.send(req, [ message.imagemapMessage(messages) ]);
+        //     return;
+        // }
     );
 });
 
 app.listen(app.get('port'), function() {
     console.log('Node app is running');
 });
+
+// メッセージの長さを返す
+function textcount(body) {
+    return body.length;
+}
 
 function getProfileOption(user_id) {
     return {
