@@ -52,7 +52,14 @@ app.post('/callback', function(req, res) {
 //        }
          function(req, displayName, message_text) {
              var messages = ["1", "2", "3", "4"];
-             sendMessage.send(req, [ messageTemplate.imagemapMessage(messages) ]);
+             if (message_text == "猫") {
+                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/8cbL5dl.jpg') ]);
+             } else if (message_text == "犬") {
+                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/ph82KWH.jpg') ]);
+             } else {
+                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/Z6ilhSI.jpg') ]);                 
+             }
+
              return;
          }
     );
