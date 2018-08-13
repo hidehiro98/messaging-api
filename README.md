@@ -2,7 +2,7 @@
 
 勉強会用のBOTソースコードです。
 
-今回作成予定のもの</br>
+今回作成するのは、自動で応答してくれるLINE BOTです</br>
 <img src="https://github.com/x-hack-git/messaging-api/blob/master/image/sample_image.gif" height="320px">
 
 # 必要なアカウント
@@ -20,7 +20,7 @@ https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&fl
 Heroku アカウントの利用登録
 https://id.heroku.com/login
 
-今回利用するクラウドサーバーです。
+今回利用するクラウドサーバーです。</br>
 自分が書いたプログラムを、クラウド上で実行してくれるサービスです。
 
 ### やること
@@ -31,7 +31,7 @@ https://id.heroku.com/login
 LINE Messaging API の利用登録
 https://developers.line.me/ja/
 
-LINE Messaging APIを利用するために必要です。
+LINE Messaging APIを利用するために必要です。</br>
 Botアカウントを作成し、herokuサーバーと連携します。
 
 ### やること
@@ -45,8 +45,8 @@ Botアカウントを作成し、herokuサーバーと連携します。
 codenvyアカウント登録
 https://codenvy.io/site/login
 
-ブラウザ上で動作する開発環境です。
-開発環境を構築する際の、複雑で面倒なインストール作業を省略できます。
+ブラウザ上で動作する開発環境です。</br>
+開発環境を構築する際の、複雑で面倒なインストール作業を省略できます。</br>
 実際にコードを書いてプログラミングをし、herokuサーバーにアップロードします。
 
 ### やること
@@ -54,8 +54,8 @@ https://codenvy.io/site/login
 - LINE Messaging APIを利用するための準備をする
 
 ## githubアカウント
-ソースコードを公開するためのサービスです。
-複数人で同じプロジェクトを開発するときにお互いの編集作業を連携するのに便利です。
+ソースコードを公開するためのサービスです。</br>
+複数人で同じプロジェクトを開発するときにお互いの編集作業を連携するのに便利です。</br>
 また、クラウドサーバーにソースコードをアップするのにも使えます。
 
 ### やること
