@@ -17,32 +17,31 @@ app.use(bodyParser.json());
 
 app.post('/callback', function(req, res) {
     async.waterfall([
-            function(callback) {
-                // リクエストがLINE Platformから送られてきたか確認する
-                if (!validate_signature(req.headers['x-line-signature'], req.body)) {
-                    return;
-                }
-                // テキストが送られてきた場合のみ返事をする
-                if ((req.body['events'][0]['type'] != 'message') || (req.body['events'][0]['message']['type'] != 'text')) {
-                    return;
-                }
-                // 特定の単語に反応させたい
-                //if (req.body['events'][0]['message']['text'].indexOf('please input some word') == -1) {
-                //    return;
-                //}
+        function(callback) {
+            // リクエストがLINE Platformから送られてきたか確認する
+            if (!validate_signature(req.headers['x-line-signature'], req.body)) {
+                return;
+            }
+            // テキストが送られてきた場合のみ返事をする
+            if ((req.body['events'][0]['type'] != 'message') || (req.body['events'][0]['message']['type'] != 'text')) {
+                return;
+            }
+            // 特定の単語に反応させたい
+            //if (req.body['events'][0]['message']['text'].indexOf('please input some word') == -1) {
+            //    return;
+            //}
 
-                // ユーザIDを取得する
-                var user_id      = req.body['events'][0]['source']['userId'];
-                var message_text = req.body['events'][0]['message']['text'];
-                if (req.body['events'][0]['source']['type'] == 'user') {
-                    request.get(getProfileOption(user_id), function(error, response, body) {
-                        if (!error && response.statusCode == 200) {
-                            callback(req, body['displayName'], message_text);
-                        }
-                    });
-                }
-            },
-        ],
+            // ユーザIDを取得する
+            var user_id      = req.body['events'][0]['source']['userId'];
+            var message_text = req.body['events'][0]['message']['text'];
+            if (req.body['events'][0]['source']['type'] == 'user') {
+                request.get(getProfileOption(user_id), function(error, response, body) {
+                    if (!error && response.statusCode == 200) {
+                        callback(req, body['displayName'], message_text);
+                    }
+                });
+            }
+        },],
         function(req, displayName, message_text) {
             var message = "hello," +　displayName　+ ""; // helloと返事する
             //var message = message_text; // おうむ返しする
@@ -57,7 +56,7 @@ app.post('/callback', function(req, res) {
 //             } else if (message_text == "犬") {
 //                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/ph82KWH.jpg') ]);
 //             } else {
-//                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/Z6ilhSI.jpg') ]);                 
+//                 sendMessage.send(req, [ messageTemplate.imagemapMessage(messages, 'https://i.imgur.com/Z6ilhSI.jpg') ]);
 //             }
 //
 //             return;
